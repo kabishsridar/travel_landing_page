@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Travel Booking Form</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- Use external CSS only -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -63,10 +64,53 @@
       border-left: 5px solid #007bff;
       display: none;
     }
+    ul li {
+      display: inline;
+      gap: 30px;
+    }
+    .nav ul li a {
+      background: none;
+      background-image: none;
+      list-style: none;
+      padding: 8px 12px;
+    }
+    ul li a {
+    font-size: larger;
+    text-decoration: none;
+    color: darkslategrey;
+    padding: 3px;
+    font-weight: 600;
+    text-align: center;
+    }
+
+  .nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0px;
+      position: relative;
+      margin-top: -22px;
+      padding: 10px 10px;
+      border-radius: 5px;
+      font-family: sans-serif;
+  }
+
   </style>
 </head>
 
 <body>
+
+  <!-- ✅ Navbar (no inline styles, uses style.css only) -->
+  <div class="nav">
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./destination.html">Destinations</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./ebook.html">E-Book</a></li>
+    </ul>
+  </div>
 
   <h2>Travel Booking Form</h2>
 
@@ -122,17 +166,16 @@
 
       // Create a string of the submitted data and insert it into the result div
       result.innerHTML = "<strong>Booking Details Submitted:</strong><br><br>" +
-        "👤 Name: " + name + "<br>" +
-        "📞 Phone: " + phone + "<br>" +
-        "👥 Members: " + members + "<br>" +
-        "🧭 Destination: " + destination + "<br>" +
-        "🗓️ Days: " + days;
+        "Name: " + name + "<br>" +
+        "Phone: " + phone + "<br>" +
+        "Members: " + members + "<br>" +
+        "Destination: " + destination + "<br>" +
+        "Days: " + days;
 
       // Make the result div visible
       result.style.display = "block";
     });
   </script>
-
 
 </body>
 
